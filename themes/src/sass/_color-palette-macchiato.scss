@@ -1,16 +1,16 @@
 // Catppuccin Macchiato Theme Color Palette
 
 // Blue
-$blue-light: #1e66f5;
-$blue-dark: #8aadf4;
+$blue-light: #2b436c;
+$blue-dark: #82a2d9;
 
 // Flamingo
 $flamingo-light: #dd7878;
 $flamingo-dark: #f0c6c6;
 
 // Green
-$green-light: #40a02b;
-$green-dark: #a6da95;
+$green-light: #398033;
+$green-dark: #92bf8e;
 
 // Lavender
 $lavender-light: #7287fd;
@@ -21,24 +21,24 @@ $maroon-light: #e64553;
 $maroon-dark: #ee99a0;
 
 // Mauve
-$mauve-light: #8839ef;
-$mauve-dark: #c6a0f6;
+$mauve-light: #4d366c;
+$mauve-dark: #b394de;
 
 // Peach
-$peach-light: #fe640b;
-$peach-dark: #f5a97f;
+$peach-light: #8c5838;
+$peach-dark: #d28e64;
 
 // Pink
-$pink-light: #ea76cb;
-$pink-dark: #f5bde6;
+$pink-light: #794362;
+$pink-dark: #d68fb8;
 
 // Red
-$red-light: #d20f39;
-$red-dark: #ed8796;
+$red-light: #733434;
+$red-dark: #e07f7f;
 
 // Rosewater
 $rosewater-light: #dc8a78;
-$rosewater-dark: #f4dbd6;
+$rosewater-dark: #f2b5b5;
 
 // Sapphire
 $sapphire-light: #209fb5;
@@ -49,45 +49,45 @@ $sky-light: #04a5e5;
 $sky-dark: #91d7e3;
 
 // Teal
-$teal-light: #179299;
-$teal-dark: #8bd5ca;
+$teal-light: #13806a;
+$teal-dark: #4cbaa4;
 
 // Yellow
 $yellow-light: #df8e1d;
-$yellow-dark: #eed49f;
+$yellow-dark: #d9b445;
 
 // Grey
-$grey-050: #eff1f5;
-$grey-100: #e6e9ef;
-$grey-150: #dce0e8;
-$grey-200: #ccd0da;
-$grey-250: #bcc0cc;
-$grey-300: #bac2de;
-$grey-350: #a6adc8;
-$grey-400: #9399b2;
-$grey-450: #7f849c;
-$grey-500: #6c7086;
-$grey-550: #585b70;
-$grey-600: #414559;
-$grey-650: #363a4f;
-$grey-700: #313244;
-$grey-750: #292c3c;
-$grey-800: #232634;
-$grey-850: #1e1e2e;
-$grey-900: #181825;
-$grey-950: #11111b;
+$grey-050: #f2e9e0;
+$grey-100: #dfd9d2;
+$grey-150: #d9d1c9;
+$grey-200: #bfb9b3;
+$grey-250: #b3aca5;
+$grey-300: #9e9994;
+$grey-350: #938d88;
+$grey-400: #867f79;
+$grey-450: #79726d;
+$grey-500: #6b6661;
+$grey-550: #5e5955;
+$grey-600: #414658;
+$grey-650: #393e4d;
+$grey-700: #313542;
+$grey-750: #2b2f3b;
+$grey-800: #242730;
+$grey-850: #1b1e24;
+$grey-900: #181b20;
+$grey-950: #111317;
 
 // White
-$white: #eff1f5;
+$white: #f2e9e0;
 
 // Black
-$black: #24273a;
+$black: #242730;
 
 // Theme
 $default-light: #006a83;
 $default-dark: #27a1b9;
 
 // Button
-$button-close: if($topbar == 'light', #d20f39, #f38ba8);
-$button-max: if($topbar == 'light', #40a02b, #a6e3a1);
-$button-min: if($topbar == 'light', #fe640b, #fab387);
+$button-close: if($topbar == 'light', #733434, #e07f7f);
+$button-max: if($topbar == 'light', #24661e, #92bf8e);
+$button-min: if($topbar == 'light', #a66842, #d28e64);
