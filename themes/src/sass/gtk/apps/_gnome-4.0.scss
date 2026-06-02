@@ -7,12 +7,8 @@
 		background-color: $background;
 	}
 
-	& headerbar > widget > windowtitle {
-		padding: 0;
-		margin: 6px;
-	}
-
-	.sidebar-pane {
+	.sidebar-pane,
+	.content-pane {
 		background-color: $background;
 		color: $text;
 
@@ -22,19 +18,30 @@
 		}
 	}
 
+	.sidebar-pane {
+		&:dir(ltr),
+		&.end:dir(rtl) {
+			&,
+			banner > revealer > widget {
+				box-shadow: none;
+				border-right: none;
+			}
+		}
+
+		&:dir(rtl),
+		&.end:dir(ltr) {
+			&,
+			banner > revealer > widget {
+				box-shadow: none;
+				border-left: none;
+			}
+		}
+	}
+
 	placessidebar {
 		> scrolledwindow {
 			@extend %nautilus_sidebar_style;
-
-			/* > viewport > .navigation-sidebar { */
-			/* 	@extend %sidebar_list; */
-			/* } */
 		}
-
-		/* scrollbar { */
-		/* 	@extend %sidebar_scrollbar; */
-		/* 	@extend %round_scrollbar; */
-		/* } */
 	}
 
 	placesview {
@@ -47,24 +54,28 @@
 		background-color: transparent;
 	}
 
-	.nautilus-grid-view {
-		child.activatable {
-			@extend %row_activatable;
-		}
-	}
-
 	.nautilus-grid-view,
 	.nautilus-list-view {
-		/* @extend %content_style; */
 		@extend %nautilus_content_style;
 
 		.view {
 			background-color: transparent;
 		}
 
-		row.activatable > cell {
-			padding: 0px;
-			margin: 0px;
+		listview.view {
+			> row.activatable {
+				> cell {
+					padding: 0;
+
+					> widget#NautilusViewCell {
+						padding: $space-size / 2 $space-size * 1.5;
+					}
+				}
+
+				&:nth-child(odd):not(:disabled) {
+					background-image: image(gtkalpha(currentColor, 0.03));
+				}
+			}
 		}
 
 		scrolledwindow {
@@ -74,9 +85,7 @@
 				@extend %round_scrollbar;
 			}
 		}
-	}
 
-	.nautilus-grid-view {
 		child.activatable {
 			@extend %row_activatable;
 		}
@@ -728,30 +737,8 @@ menubutton stack > box {
 .tweak-titlebar-left {
 	@extend %sidebar_style;
 
-	box-shadow: inset 0 1px highlight($background);
-	border-top-left-radius: $window-radius;
-
-	& > windowhandle > box {
-		padding: 0px;
-		margin: 0 10px 0 15px;
-	}
-
-	& > windowhandle widget > box.start {
-		padding: 0px;
-		margin: 0;
-	}
-
-	& > windowhandle widget > box,
-	windowtitle {
-		padding: 0px;
-		margin: 0 -10px 0 10px;
-	}
-
 	&:backdrop {
 		@extend %sidebar_style;
-
-		box-shadow: inset 0 1px highlight($background);
-		border-top-left-radius: $window-radius;
 	}
 }
 
@@ -1998,4 +1985,28 @@ notebook scrolledwindow treeview.treeview-spacing {
 }
 .account-switcher-row label.dim-label {
 	color: $text-secondary;
+}
+
+//
+// Chrome
+//
+window.background.chromium {
+	background-color: $list-row;
+
+	headerbar.header-bar.titlebar {
+		padding: 0 $space-size * 2;
+		background-color: $titlebar;
+		color: $titlebar-text;
+		border-radius: $window-radius $window-radius 0 0;
+		box-shadow: inset 0 1px 0 rgba($white, 0.1);
+
+		&:backdrop {
+			background-color: $titlebar-backdrop;
+			color: $titlebar-text-disabled;
+		}
+
+		button.titlebutton {
+			margin: 0 $space-size / 2 - 3px;
+		}
+	}
 }
